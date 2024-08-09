@@ -45,9 +45,12 @@ impl<F: FieldElement> BackendFactory<F> for Factory {
             return Err(Error::NoSetupAvailable);
         }
 
+        //Gavin, recursion
+        /*
         if verification_app_key.is_some() {
             return Err(Error::NoAggregationAvailable);
-        }
+        }*/
+
         if pil.degrees().len() > 1 {
             return Err(Error::NoVariableDegreeAvailable);
         }
