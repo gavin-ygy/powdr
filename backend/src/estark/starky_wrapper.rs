@@ -152,9 +152,10 @@ impl<F: FieldElement> EStark<F> {
         assert!(matches!(self.proof_type, ProofType::StarkGL));
 
         // TODO this should be supported by GL -> GL compression
-        if prev_proof.is_some() {
+        //Gavin
+        /*if prev_proof.is_some() {
             return Err(Error::NoAggregationAvailable);
-        }
+        }*/
         if witness.is_empty() {
             return Err(Error::EmptyWitness);
         }
